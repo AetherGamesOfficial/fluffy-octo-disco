@@ -1,12 +1,11 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta http-equiv="Cache-Control" content="no-store">
-  <base href="https://cdn.jsdelivr.net/gh/sealiee11/arctic-static@main/">
-  <title>Loading...</title>
-  <style>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="position:fixed;inset:0;width:100%;height:100%;display:block;margin:0;padding:0;background:#0d1324;">
+  <foreignObject x="0" y="0" width="100%" height="100%">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+      <head>
+        <base href="https://cdn.jsdelivr.net/gh/sealiee11/arctic-static@main/" />
+        <style><![CDATA[
+
     html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #0d1324; color: #eef5ff; font-family: system-ui, sans-serif; }
     #stage { position: fixed; inset: 0; display: grid; place-items: center; text-align: center; }
     #status { opacity: .78; margin-top: 12px; font-size: 14px; letter-spacing: .03em; }
@@ -15,9 +14,11 @@
     #error { display: none; max-width: 520px; padding: 28px; }
     #retry { margin-top: 18px; border: 0; border-radius: 10px; background: #ff265c; color: white; padding: 12px 24px; font-weight: 700; cursor: pointer; }
     @keyframes spin { to { transform: rotate(360deg); } }
-  </style>
-</head>
-<body>
+  
+        ]]></style>
+      </head>
+      <body style="margin:0;width:100%;height:100%;overflow:hidden;background:#0d1324;">
+
   <div id="stage">
     <div>
       <div id="mark"></div>
@@ -30,7 +31,12 @@
     </div>
   </div>
   <iframe id="frame" allow="autoplay; fullscreen; clipboard-read; clipboard-write; encrypted-media; picture-in-picture; gamepad"></iframe>
-  <script>
+
+      </body>
+    </html>
+  </foreignObject>
+  <script><![CDATA[
+
     (() => {
       const memory = new Map();
       const safeStore = {
@@ -44,8 +50,10 @@
         catch { try { Object.defineProperty(window, name, { value: safeStore, configurable: true }); } catch {} }
       }
     })();
-  </script>
-  <script type="module">
+
+  ]]></script>
+  <script type="module"><![CDATA[
+
     import { r as prepare, R as Runtime, d as decodeTarget } from "https://cdn.jsdelivr.net/gh/sealiee11/arctic-static@main/assets/resolver-C09Pc7JC.js";
 
     const params = new URLSearchParams(location.search);
@@ -202,6 +210,6 @@
     });
 
     load();
-  </script>
-</body>
-</html>
+
+  ]]></script>
+</svg>
